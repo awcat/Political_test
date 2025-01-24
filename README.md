@@ -1,16 +1,19 @@
 RUN the application locally using docker
 
-#RUN the custom script
+#Start the App
+cd Politial_test
 bash deploy.sh
 
 #Application should be available at
 localhost:3000
 
-#Enter your name and city
+How the app works
+1) Enter your name and city
+2) Answer the questions
+3) Submit and view the finale result
+4) To see all the submitted questionnaires go to: localhost:3000/results
 
-#Answer the questions
 
-#Submit and view the results 
+#Stop the app
+Ctrl+C
 
-#Check the database entries
-localhost:3000/results
