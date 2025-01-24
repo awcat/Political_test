@@ -3,6 +3,7 @@ yes | docker container prune
 docker-compose down
 sleep 1
 docker-compose build --no-cache
+sleep 1
 if [ $? -eq 0 ]; then
    echo "Image successfully built!"
    sleep 1
@@ -10,8 +11,7 @@ if [ $? -eq 0 ]; then
    docker-compose up
    sleep 1
    if  [ $? -eq 0 ]; then
-      echo "App is running! go to localhost:3000"
-      sleep 1
+      echo "OK"
    else
       echo "Something went wrong..."
       sleep 1
