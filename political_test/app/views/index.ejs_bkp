@@ -1,0 +1,24 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Political Test</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Political Test</h1>
+  <form action="/" method="POST">
+    <% questions.forEach((q, index) => { %>
+      <div class="question">
+        <p><%= q.question %></p>
+        <input type="radio" name="answers[<%= index %>]" value="a" required> <%= q.options[0] %><br>
+        <input type="radio" name="answers[<%= index %>]" value="b" required> <%= q.options[1] %>
+      </div>
+    <% }); %>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+

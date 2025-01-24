@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scopri quale partito votare alle prossime elezioni</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Scopri quale partito votare alle prossime elezioni</h1>
+    <form action="/" method="POST">
+      <!-- Name Field -->
+      <div class="question">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <!-- City Field -->
+      <div class="question">
+        <label for="citta">Città:</label>
+        <input type="text" id="citta" name="citta" required>
+      </div>
+      <!-- Questions -->
+      <% questions.forEach((q, index) => { %>
+        <div class="question">
+          <p><%= q.question %></p>
+          <label>
+            <input type="radio" name="answers[<%= index %>]" value="a" required> <%= q.options[0] %>
+          </label><br>
+          <label>
+            <input type="radio" name="answers[<%= index %>]" value="b" required> <%= q.options[1] %>
+          </label>
+        </div>
+      <% }); %>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+

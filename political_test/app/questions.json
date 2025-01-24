@@ -1,0 +1,31 @@
+[
+  {
+    "question": "Qual è la tua opinione sulla gestione della crisi climatica?",
+    "options": [
+      "a) È necessario rafforzare il Green Deal e raggiungere la neutralità climatica entro il 2040.",
+      "b) Bisogna modificare il Green Deal per renderlo economicamente sostenibile e rivedere le direttive ambientali."
+    ]
+  },
+  {
+    "question": "Cosa pensi dell'austerità economica?",
+    "options": [
+      "a) L'austerità deve finire, supportiamo investimenti per una transizione giusta.",
+      "b) La politica di austerità non deve tornare, ma bisogna favorire spese per investimenti produttivi."
+    ]
+  },
+  {
+    "question": "Qual è la tua posizione sulla migrazione?",
+    "options": [
+      "a) È necessario riformare il Patto sulla migrazione e asilo basato su umanità e solidarietà.",
+      "b) Bisogna rafforzare il controllo delle frontiere e combattere l'immigrazione clandestina."
+    ]
+  },
+  {
+    "question": "Cosa ne pensi del ruolo dell'Unione Europea?",
+    "options": [
+      "a) L'Europa dovrebbe promuovere la pace, la diplomazia e il disarmo.",
+      "b) L'Europa dovrebbe essere un'alleanza di Nazioni sovrane con un ruolo forte nelle questioni internazionali."
+    ]
+  }
+]
+

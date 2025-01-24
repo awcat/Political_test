@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Risultati</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Città</th>
+          <th>Risposte</th>
+          <th>% A</th>
+          <th>% B</th>
+          <th>Data e Ora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => {
+          const totalAnswers = user.answers.length;
+          const countA = user.answers.filter(answer => answer === 'a').length;
+          const countB = totalAnswers - countA;
+          const percentA = (countA / totalAnswers) * 100;
+          const percentB = (countB / totalAnswers) * 100;
+        %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.citta %></td>
+            <td><%= user.answers.join(', ') %></td>
+            <td><%= percentA.toFixed(2) %> %</td>
+            <td><%= percentB.toFixed(2) %> %</td>
+            <td><%= new Date(user.createdAt).toLocaleString() %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+

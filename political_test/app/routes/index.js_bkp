@@ -1,0 +1,21 @@
+// routes/index.js
+const express = require('express');
+const router = express.Router();
+const User = require('../models/User');
+const questions = require('../questions.json');
+
+// Display the questions form
+router.get('/', (req, res) => {
+  res.render('index', { questions });
+});
+
+// Handle form submission
+router.post('/', async (req, res) => {
+  const { answers } = req.body;
+  const newUser = new User({ answers });
+  await newUser.save();
+  res.send('Grazie per aver completato il test!');
+});
+
+module.exports = router;
+
