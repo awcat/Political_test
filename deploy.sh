@@ -11,7 +11,8 @@ if [ $? -eq 0 ]; then
    docker-compose up
    sleep 1
    if  [ $? -eq 0 ]; then
-      echo "OK"
+   docker-compose down
+   sleep 1
    else
       echo "Something went wrong..."
       sleep 1
